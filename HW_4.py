@@ -27,6 +27,6 @@ my_string = "0123456789"
 my_result = []
 for value_1 in my_string:
     for value_2 in my_string:
-        my_result.append(value_1 + value_2)
+        my_result.append(int(value_1 + value_2))
 print(my_result)
 
