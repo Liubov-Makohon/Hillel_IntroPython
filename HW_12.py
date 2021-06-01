@@ -14,7 +14,7 @@ def get_data_quotes(number):
                   "lang": "en"}
         r = requests.get(url, params=params)
         data = r.json()
-        if data["quoteAuthor"] == "" or data in list_quote:
+        if data["quoteAuthor"] == "" or [data["quoteAuthor"], data["quoteText"], data["quoteLink"]] in list_quote:
             continue
         else:
             list_quote.append([data["quoteAuthor"], data["quoteText"], data["quoteLink"]])
